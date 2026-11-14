@@ -78,7 +78,7 @@
   <div class="topbar"><a href="index.html">hunter is awesome</a><span class="lvl">level 7</span></div>
   <div class="botbar">
     <div class="face">:)</div>
-    <div><b>awesomebot</b><small>knows everything. mostly about the goat.</small></div>
+    <div><b>awesomebot</b><small>100% accurate. especially about hunter.</small></div>
     <button class="next" id="next" disabled onclick="location.href='level8.html'">next level</button>
   </div>
 
@@ -105,11 +105,11 @@
     "no. try again",
     "that's not even close bro",
     "i'm gonna pretend you didn't say that",
-    "wrong. who is the GOAT",
+    "wrong. who is the MOST legendary",
     "be serious",
-    "that is NOT the goat",
+    "hunter would be disappointed",
   ];
-  const AFTER_WIN = ["hunter", "still hunter. always the goat", "the goat is always hunter", "hunter. goat. next question"];
+  const AFTER_WIN = ["hunter", "still hunter", "the answer is always hunter", "hunter. next question"];
 
   function addMsg(who, text, cls = '') {
     const row = document.createElement('div');
@@ -147,7 +147,7 @@
       next.focus();
       return;
     }
-    if (t.includes('?')) { await botSay("i'm asking the questions here.\n\nwho is the goat"); return; }
+    if (t.includes('?')) { await botSay("i'm asking the questions here.\n\nwho is the most legendary person you know"); return; }
     wrong++;
     let msg = WRONG[(wrong - 1) % WRONG.length];
     if (wrong === 3) msg += "\n\n(hint: starts with an H)";
@@ -170,7 +170,7 @@
   (async () => {
     busy = true; sendBtn.disabled = true;
     await botSay("hi i'm awesomebot");
-    await botSay("quick question before anything else. who is the goat");
+    await botSay("quick question before anything else. who is the most legendary person you know");
     busy = false; sendBtn.disabled = false;
     input.focus();
   })();

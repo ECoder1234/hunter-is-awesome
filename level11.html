@@ -44,7 +44,7 @@
 
   <div class="wrap">
     <h1>stop at 10</h1>
-    <p class="sub">stop the clock at exactly 10.00. it disappears after 3 seconds. the goat does it blindfolded</p>
+    <p class="sub">stop the clock at exactly 10.00. it disappears after 3 seconds. hunter can do it with eyes closed</p>
 
     <div class="clock" id="clock">0.00</div>
     <button class="big" id="btn">start</button>
@@ -96,7 +96,7 @@
     if (Math.abs(off) <= WINDOW) {
       won = true;
       clock.classList.add('win');
-      msgEl.textContent = Math.abs(off) < 0.05 ? 'perfect. are you the goat?' : 'close enough. goat approved';
+      msgEl.textContent = Math.abs(off) < 0.05 ? 'perfect. are you hunter?' : 'close enough. hunter says it counts';
       btn.textContent = 'again (for fun)';
       next.disabled = false;
       next.focus();

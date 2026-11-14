@@ -70,7 +70,7 @@
 
   <div class="wrap">
     <h1>hunterdle</h1>
-    <p class="sub">guess the goat's name. 6 letters, 6 tries.</p>
+    <p class="sub">guess the 6 letter word. you have 6 tries.</p>
     <div class="legend">
       <span><i style="background:var(--gold)"></i>right spot</span>
       <span><i style="background:var(--blue)"></i>wrong spot</span>
@@ -187,12 +187,12 @@
       if (g === ANSWER) {
         done = true;
         [...ts].forEach((t, i) => setTimeout(() => t.classList.add('win'), i * 80));
-        msgEl.textContent = 'obviously. it was always the goat';
+        msgEl.textContent = 'obviously. who else would it be';
         next.disabled = false;
         next.focus();
       } else if (row === TRIES - 1) {
         done = true;
-        msgEl.textContent = "out of tries. it's the goat's name bro. it's on every page";
+        msgEl.textContent = "out of tries. bro it's the name at the top of the page";
         againBtn.style.display = 'inline-block';
       } else {
         msgEl.textContent = WRONG_LINES[row];
