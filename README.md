@@ -1,6 +1,7 @@
 # hunter is awesome
 
 A tiny puzzle website with 12 levels, all about how awesome Hunter is.
+Levels 13-25 are locked away in lock/, and not/ is the hater version with all 25.
 
 Play it: https://ecoder1234.github.io/hunter-is-awesome/
 
