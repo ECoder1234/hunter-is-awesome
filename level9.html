@@ -66,7 +66,7 @@
     </div>
 
     <div class="target" id="target"></div>
-    <input id="input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+    <input id="input" data-no-admin autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
            placeholder="start typing to start the clock" aria-label="Type the phrase">
 
     <div class="msg" id="msg"></div>
@@ -76,7 +76,7 @@
   </div>
 
 <script>
-  const PHRASE = 'hunter is awesome';
+  const PHRASE = 'hunter is the goat';
   const GOAL = 5, LIMIT = 30;
   const input = document.getElementById('input');
   const targetEl = document.getElementById('target');
@@ -127,7 +127,7 @@
       clearInterval(timer);
       input.disabled = true;
       input.placeholder = 'out of time';
-      msgEl.textContent = 'too slow. hunter is waiting';
+      msgEl.textContent = 'too slow. the goat is waiting';
       retryBtn.style.display = 'inline-block';
     }
   }
@@ -164,5 +164,6 @@
 
   reset();
 </script>
+<script src="admin.js"></script>
 </body>
 </html>

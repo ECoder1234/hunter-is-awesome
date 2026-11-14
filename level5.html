@@ -59,14 +59,14 @@
   <div class="topbar"><a href="index.html">hunter is awesome</a><span class="lvl">level 5</span></div>
 
   <div class="wrap">
-    <h1>go tell hunter 'ur awesome'</h1>
-    <p class="sub">10 times. hunter keeps running off.</p>
+    <h1>go tell hunter 'you the goat'</h1>
+    <p class="sub">10 times. the goat keeps running off.</p>
 
     <div class="hud" id="hud"></div>
 
     <div class="game">
       <canvas id="game"></canvas>
-      <div class="overlay" id="overlay"><b>hunter knows.</b><span>10/10. next level unlocked</span></div>
+      <div class="overlay" id="overlay"><b>the goat knows.</b><span>10/10. next level unlocked</span></div>
     </div>
 
     <p class="controls-hint">move <kbd>WASD</kbd> or <kbd>arrows</kbd> &nbsp; talk <kbd>space</kbd></p>
@@ -102,8 +102,8 @@
     "###############",
   ];
 
-  const PRAISE = ["hunter ur awesome", "HUNTER IS AWESOME", "ur the goat fr", "best guy ever", "W hunter", "certified awesome", "hunter >>> everyone"];
-  const REPLIES = ["i know", "facts", "say it louder", "obviously", "ty ty", "tell me something i don't know", "W", "real"];
+  const PRAISE = ["you the goat", "HUNTER IS THE GOAT", "goated fr", "no one does it like you", "W hunter", "certified goat", "hunter >>> everyone", "GOAT behavior"];
+  const REPLIES = ["i know", "facts", "louder for the back", "obviously", "the goat thanks you", "tell me something i don't know", "W", "real", "goat recognizes goat"];
 
   // ---------- Setup ----------
   const canvas = document.getElementById('game');
@@ -169,7 +169,7 @@
 
   function talk() {
     if (won || cooldown) return;
-    if (!adjacent()) { say('player', "where'd hunter go", 0, 900); return; }
+    if (!adjacent()) { say('player', "where'd the goat go", 0, 900); return; }
     cooldown = true;
     score++;
     hud.children[score - 1].classList.add('on');
@@ -178,7 +178,7 @@
 
     if (score >= GOAL) {
       won = true;
-      say('hunter', "ok ok i get it", 400, 99999);
+      say('hunter', "ok ok the goat hears you", 400, 99999);
       setTimeout(() => {
         document.getElementById('overlay').style.display = 'flex';
         next.disabled = false;
@@ -386,5 +386,6 @@
     document.fonts ? document.fonts.load('700 17px Rubik').catch(() => {}) : null,
   ]).then(() => { buildGround(); requestAnimationFrame(frame); });
 </script>
+<script src="admin.js"></script>
 </body>
 </html>

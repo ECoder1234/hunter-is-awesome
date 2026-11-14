@@ -54,7 +54,7 @@
 
   <div class="wrap">
     <h1>crown run</h1>
-    <p class="sub">grab every crown. the haters don't want hunter to have them.</p>
+    <p class="sub">grab every crown. the haters can't handle the goat.</p>
 
     <div class="hud">
       <span id="left">crowns left: 0</span>
@@ -243,7 +243,7 @@
 
   function win() {
     state = 'won';
-    showOverlay('every crown collected', 'hunter is pleased. next level unlocked');
+    showOverlay('every crown collected', 'goat approved. next level unlocked');
     next.disabled = false;
     next.focus();
   }
@@ -413,5 +413,6 @@
   buildMaze();
   (document.fonts ? document.fonts.load('700 12px Rubik').catch(() => {}) : Promise.resolve()).then(() => requestAnimationFrame(frame));
 </script>
+<script src="admin.js"></script>
 </body>
 </html>
